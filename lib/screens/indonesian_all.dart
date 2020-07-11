@@ -10,7 +10,10 @@ class _IndonesianDetailPageState extends State<IndonesianDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Province Stats"),),
-      body: ListTile(),
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        child: ListView.builder(itemBuilder: null),
+      ),
     );
   }
 }
