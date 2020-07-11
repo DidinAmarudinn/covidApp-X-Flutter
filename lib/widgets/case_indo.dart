@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:covid_app/model/indonstats_model.dart';
 import 'package:covid_app/screens/indo_stats.dart';
+import 'package:covid_app/screens/indonesian_all.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -48,7 +49,9 @@ class _CaseIndoState extends State<CaseIndo> {
                     fontWeight: FontWeight.bold),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=>IndonesianDetailPage()));
+                },
                 child: Text(
                   "View all",
                   style: TextStyle(
